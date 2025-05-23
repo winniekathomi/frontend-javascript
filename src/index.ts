@@ -5,3 +5,4 @@ if (app) {
 } else {
   console.error('App container not found');
 }
+
