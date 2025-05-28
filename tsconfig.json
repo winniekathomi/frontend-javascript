@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ES5",
     "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./js",
     "strict": true,
+    "noImplicitAny": false,
     "esModuleInterop": true,
-    "outDir": "dist"
+    "skipLibCheck": true
   },
-  "include": ["task_4/**/*"],
-  "exclude": ["node_modules"]
+  "include": [
+    "./js/**/*"
+  ]
 }

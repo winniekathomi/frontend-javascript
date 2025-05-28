@@ -1,0 +1,16 @@
+{
+  "name": "alx-frontend-javascript-task-2",
+  "version": "1.0.0",
+  "description": "ALX Frontend JS Task 2",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "start": "webpack serve --open --mode=development"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
