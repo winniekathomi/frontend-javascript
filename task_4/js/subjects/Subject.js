@@ -1,18 +1,10 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Subject = void 0;
-class Subject {
-    setTeacher(teacher) {
-        this.teacher = teacher;
-    }
-    getRequirements() {
-        return '';
-    }
-    getAvailableTeacher() {
-        if (this.teacher) {
-            return `Available Teacher: ${this.teacher.firstName}`;
+var Subjects;
+(function (Subjects) {
+    class Subject {
+        setTeacher(teacher) {
+            this.teacher = teacher;
         }
-        return 'No teacher available';
     }
-}
-exports.Subject = Subject;
+    Subjects.Subject = Subject;
+})(Subjects || (Subjects = {}));

@@ -1,26 +1,9 @@
-// js/subjects/Subject.ts
-import { Teacher } from './Teacher';
+namespace Subjects {
+  export class Subject {
+    teacher?: Teacher;
 
-
-export class Subject {
-  teacher?: Teacher;
-
-  setTeacher(teacher: Teacher) {
-    this.teacher = teacher;
-  }
-
-  getRequirements(): string {
-    return '';
-  }
-
-  getAvailableTeacher(): string {
-    if (this.teacher) {
-      return `Available Teacher: ${this.teacher.firstName}`;
+    setTeacher(teacher: Teacher) {
+      this.teacher = teacher;
     }
-    return 'No teacher available';
   }
 }
-
-
-
-

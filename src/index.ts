@@ -1,3 +1,4 @@
+import '../task_1/main';
 const app = document.getElementById('app');
 
 if (app) {

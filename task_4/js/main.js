@@ -1,27 +1,29 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const Cpp_1 = require("./subjects/Cpp");
-const Java_1 = require("./subjects/Java");
-const React_1 = require("./subjects/React");
-const cpp = new Cpp_1.Cpp();
-const java = new Java_1.Java();
-const react = new React_1.React();
+/// <reference path="./subjects/Teacher.ts" />
+/// <reference path="./subjects/Cpp.ts" />
+/// <reference path="./subjects/Java.ts" />
+/// <reference path="./subjects/React.ts" />
 const cTeacher = {
     firstName: 'John',
     lastName: 'Doe',
-    experienceTeachingC: 10,
-    experienceTeachingJava: 5,
-    experienceTeachingReact: 3,
+    fullTimeEmployee: true,
+    location: 'Nairobi',
+    experienceTeachingC: 5,
+    experienceTeachingJava: 3,
+    experienceTeachingReact: 2,
 };
+const cpp = new Subjects.Cpp();
 cpp.setTeacher(cTeacher);
-java.setTeacher(cTeacher);
-react.setTeacher(cTeacher);
 console.log('C++');
 console.log(cpp.getRequirements());
 console.log(cpp.getAvailableTeacher());
+const java = new Subjects.Java();
+java.setTeacher(cTeacher);
 console.log('Java');
 console.log(java.getRequirements());
 console.log(java.getAvailableTeacher());
+const react = new Subjects.React();
+react.setTeacher(cTeacher);
 console.log('React');
 console.log(react.getRequirements());
 console.log(react.getAvailableTeacher());

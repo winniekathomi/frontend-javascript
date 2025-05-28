@@ -1,2 +1,7 @@
 node_modules/
 dist/
+# Ignore compiled JavaScript files in task_4/js
+task_4/js/*.js
+
+# Or ignore all JS files anywhere in the repo (if you want)
+*.js

@@ -1,17 +1,18 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Java = void 0;
-// js/subjects/Java.ts
-const Subject_1 = require("./Subject");
-class Java extends Subject_1.Subject {
-    getRequirements() {
-        return 'Here is the list of requirements for Java';
-    }
-    getAvailableTeacher() {
-        if (this.teacher && this.teacher.experienceTeachingJava && this.teacher.experienceTeachingJava > 0) {
+/// <reference path="./Teacher.ts" />
+/// <reference path="./Subject.ts" />
+var Subjects;
+(function (Subjects) {
+    class Java extends Subjects.Subject {
+        getRequirements() {
+            return 'Here is the list of requirements for Java';
+        }
+        getAvailableTeacher() {
+            if (!this.teacher || this.teacher.experienceTeachingJava === undefined) {
+                return 'No available teacher';
+            }
             return `Available Teacher: ${this.teacher.firstName}`;
         }
-        return 'No available teacher';
     }
-}
-exports.Java = Java;
+    Subjects.Java = Java;
+})(Subjects || (Subjects = {}));
